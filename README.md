@@ -34,7 +34,7 @@ There is a commented line that will show you the computer output.
 
 ## Contributing Authors
 
-* **Mariam Chaudry** - *Front-end Developer* *JavaScript*, *Materialize*, *CSS* *Handlebars* - [Mariam Chaudry](https://github.com/mariamschaudry)
+* **Mariam Chaudry** - *Front-end Developer* *JavaScript*, *Materialize*, *CSS* - [Mariam Chaudry](https://github.com/mariamschaudry)
 * **Elizabeth Fox** - *Project Manager* *Back-end Developer* *JavaScript* - [Elizabeth Fox](https://github.com/elizabethtfox)
 * **Catherine Muthoni** - *Back-end Developer*, *JavaScript*- [Catherine Muthoni](https://github.com/dmk6562)
 
