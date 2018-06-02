@@ -10,15 +10,15 @@ $(document).ready(function() {
     // Variable to hold our posts
     var posts;
 
-    // The code below handles the case where we want to get blog posts for a specific author
-    // Looks for a query param in the url for author_id
+    // The code below handles the case where we want to get blog posts for a specific category
+    // Looks for a query param in the url for category_id
     var url = window.location.search;
     var categoryId;
     if (url.indexOf("?category_id=") !== -1) {
         categoryId = url.split("=")[1];
         getPosts(categoryId);
     }
-    // If there's no authorId we just get all posts as usual
+    // If there's no categoryId we just get all posts as usual
     else {
         getPosts();
     }
@@ -79,9 +79,9 @@ $(document).ready(function() {
         editBtn.addClass("edit btn btn-info");
         var newPostTitle = $("<h2>");
         var newPostDate = $("<small>");
-        var newPostAuthor = $("<h5>");
-        newPostAuthor.text("Written by: " + post.Author.name);
-        newPostAuthor.css({
+        var newPostCategory = $("<h5>");
+        newPostCategory.text("Written by: " + post.Category.name);
+        newPostCategory.css({
             float: "right",
             color: "blue",
             "margin-top":
@@ -97,7 +97,7 @@ $(document).ready(function() {
         newPostCardHeading.append(deleteBtn);
         newPostCardHeading.append(editBtn);
         newPostCardHeading.append(newPostTitle);
-        newPostCardHeading.append(newPostAuthor);
+        newPostCardHeading.append(newPostCategory);
         newPostCardBody.append(newPostBody);
         newPostCard.append(newPostCardHeading);
         newPostCard.append(newPostCardBody);
@@ -128,7 +128,7 @@ $(document).ready(function() {
         var query = window.location.search;
         var partial = "";
         if (id) {
-            partial = " for Author #" + id;
+            partial = " for Category #" + id;
         }
         blogContainer.empty();
         var messageH2 = $("<h2>");
