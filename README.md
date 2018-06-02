@@ -1,4 +1,4 @@
-# ![oliveicon](https://user-images.githubusercontent.com/32858340/40879759-d9801898-6672-11e8-8d2d-851d111bc9c8.png) Olive & Thyme 
+# Olive & Thyme 
 
 Users will be able to manually enter and save their favorite recipes in our "recipe box"-styled app, Olive & Thyme! 
 Our application targets an audience that is interested in virtually saving their recipes and having access to them whenever they need. 
