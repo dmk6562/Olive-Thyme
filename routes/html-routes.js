@@ -28,8 +28,13 @@ module.exports = function(app) {
     });
 
     // authors route loads author-manager.html
-    app.get("/authors", function(req, res) {
+    app.get("/categories", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+    });
+
+    // views //
+    app.get("/view", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
 };

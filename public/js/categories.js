@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(document).on("click", ".delete-author", handleDeleteButtonPress);
 
     // Getting the initial list of Authors
-    getAuthors();
+    getCategories();
 
     // A function to handle what happens when the form is submitted to create a new Author
     function handleAuthorFormSubmit(event) {
@@ -26,10 +26,10 @@ $(document).ready(function() {
         });
     }
 
-    // A function for creating an author. Calls getAuthors upon completion
+    // A function for creating an author. Calls getCategories upon completion
     function upsertAuthor(authorData) {
-        $.post("/api/authors", authorData)
-            .then(getAuthors);
+        $.post("/api/categories", authorData)
+            .then(getCategories);
     }
 
     // Function for creating a new list row for authors
@@ -45,8 +45,8 @@ $(document).ready(function() {
     }
 
     // Function for retrieving authors and getting them ready to be rendered to the page
-    function getAuthors() {
-        $.get("/api/authors", function(data) {
+    function getCategories() {
+        $.get("/api/categories", function(data) {
             var rowsToAdd = [];
             for (var i = 0; i < data.length; i++) {
                 rowsToAdd.push(createAuthorRow(data[i]));
@@ -73,7 +73,7 @@ $(document).ready(function() {
     function renderEmpty() {
         var alertDiv = $("<div>");
         alertDiv.addClass("alert alert-danger");
-        alertDiv.text("You must create an Author before you can create a Post.");
+        alertDiv.text("You must create a category before you can create a recipe.");
         authorContainer.append(alertDiv);
     }
 
@@ -83,8 +83,8 @@ $(document).ready(function() {
         var id = listItemData.id;
         $.ajax({
             method: "DELETE",
-            url: "/api/authors/" + id
+            url: "/api/categories/" + id
         })
-            .then(getAuthors);
+            .then(getCategories);
     }
 });

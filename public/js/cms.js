@@ -9,7 +9,7 @@ $(document).ready(function() {
     // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
     var url = window.location.search;
     var postId;
-    var authorId;
+    var categoryId;
     // Sets a flag for whether or not we're updating a post to be false initially
     var updating = false;
 
@@ -20,12 +20,12 @@ $(document).ready(function() {
         getPostData(postId, "post");
     }
     // Otherwise if we have an author_id in our url, preset the author select box to be our Author
-    else if (url.indexOf("?author_id=") !== -1) {
-        authorId = url.split("=")[1];
+    else if (url.indexOf("?category_id=") !== -1) {
+        categoryId = url.split("=")[1];
     }
 
     // Getting the authors, and their posts
-    getAuthors();
+    getCategories();
 
     // A function for handling what happens when the form to create a new post is submitted
     function handleFormSubmit(event) {
@@ -42,7 +42,7 @@ $(document).ready(function() {
             body: bodyInput
                 .val()
                 .trim(),
-            AuthorId: authorSelect.val()
+            CategoryId: authorSelect.val()
         };
 
         // If we're updating a post run updatePost to update a post
@@ -70,19 +70,19 @@ $(document).ready(function() {
             case "post":
                 queryUrl = "/api/posts/" + id;
                 break;
-            case "author":
-                queryUrl = "/api/authors/" + id;
+            case "category":
+                queryUrl = "/api/categories/" + id;
                 break;
             default:
                 return;
         }
         $.get(queryUrl, function(data) {
             if (data) {
-                console.log(data.AuthorId || data.id);
+                console.log(data.CategoryId || data.id);
                 // If this post exists, prefill our cms forms with its data
                 titleInput.val(data.title);
                 bodyInput.val(data.body);
-                authorId = data.AuthorId || data.id;
+                categoryId = data.CategoryId || data.id;
                 // If we have a post with this id, set a flag for us to know to update the post
                 // when we hit submit
                 updating = true;
@@ -91,14 +91,14 @@ $(document).ready(function() {
     }
 
     // A function to get Authors and then render our list of Authors
-    function getAuthors() {
-        $.get("/api/authors", renderAuthorList);
+    function getCategories() {
+        $.get("/api/categories", renderAuthorList);
     }
     // Function to either render a list of authors, or if there are none, direct the user to the page
     // to create an author first
     function renderAuthorList(data) {
         if (!data.length) {
-            window.location.href = "/authors";
+            window.location.href = "/categories";
         }
         $(".hidden").removeClass("hidden");
         var rowsToAdd = [];
@@ -109,7 +109,7 @@ $(document).ready(function() {
         console.log(rowsToAdd);
         console.log(authorSelect);
         authorSelect.append(rowsToAdd);
-        authorSelect.val(authorId);
+        authorSelect.val(categoryId);
     }
 
     // Creates the author options in the dropdown
