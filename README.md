@@ -6,7 +6,7 @@ A shopping list is included that will allow users to add items to a list that th
 
 ## Getting Started
 
-You can use this app NOW: [Olive & Thyme](https://github.com/elizabethtfox/olive-thyme-project-2). You can also clone or download a copy of this app by clicking the link on the top-right.
+You can use this app NOW: [Olive & Thyme](https://gtcbc-project-2.herokuapp.com/). You can also clone or download a copy of this app by clicking the link on the top-right.
 
 ### Prerequisites
 
@@ -34,8 +34,8 @@ There is a commented line that will show you the computer output.
 
 ## Contributing Authors
 
-* **Mariam Chaudry** - *Front-end Developer* *JavaScript*, *Materialize*, *CSS* *Handlebars* - [Mariam Chaudry](https://github.com/mariamschaudry)
-* **Elizabeth Fox** - *Project Manager* *Back-end Developer* *JavaScript* - [Elizabeth Fox](https://github.com/elizabethtfox)
+* **Mariam Chaudry** - *Front-end Developer*, *JavaScript*, *Materialize*, *CSS* - [Mariam Chaudry](https://github.com/mariamschaudry)
+* **Elizabeth Fox** - *Project Manager*, *Back-end Developer*, *JavaScript* - [Elizabeth Fox](https://github.com/elizabethtfox)
 * **Catherine Muthoni** - *Back-end Developer*, *JavaScript*- [Catherine Muthoni](https://github.com/dmk6562)
 
 See also the list of [contributors](https://github.com/elizabethtfox/olive-thyme-project-2/graphs/contributors) who participated in this project.
