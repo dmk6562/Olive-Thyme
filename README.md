@@ -29,13 +29,12 @@ There is a commented line that will show you the computer output.
 * [HTML](https://www.w3.org/html/) - The markup language used
 * [CSS](https://www.w3.org/Style/CSS/learning.en.html) -  The style sheet language used
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - The programming language used
-* [Handlebars](https://handlebarsjs.com/) - Client-side templating engine used 
 * [Node.js](https://nodejs.org/en/) - Open-source server used to run JavaScript 
 * [MySQL](https://www.mysql.com/) - Open-source relational database management system used 
 
 ## Contributing Authors
 
-* **Mariam Chaudry** - *Front-end Developer* *JavaScript*, *Materialize*,*CSS* *Handlebars* - [Mariam Chaudry](https://github.com/mariamschaudry)
+* **Mariam Chaudry** - *Front-end Developer* *JavaScript*, *Materialize*, *CSS* *Handlebars* - [Mariam Chaudry](https://github.com/mariamschaudry)
 * **Elizabeth Fox** - *Project Manager* *Back-end Developer* *JavaScript* - [Elizabeth Fox](https://github.com/elizabethtfox)
 * **Catherine Muthoni** - *Back-end Developer*, *JavaScript*- [Catherine Muthoni](https://github.com/dmk6562)
 
