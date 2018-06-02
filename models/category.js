@@ -13,8 +13,4 @@ module.exports = function(sequelize, DataTypes) {
     };
 
     return Category;
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 6bf10aad38dc24f584aa503e28a8c3f33da2d665
