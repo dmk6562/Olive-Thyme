@@ -16,6 +16,10 @@ button.edit {
     margin: 5px;
 }
 
+#shoppingListContainer {
+    margin-top: 45px; 
+}
+
 .category-container {
     margin-top: 50px;
     /* background-color: blue;  */
@@ -63,6 +67,11 @@ body {
     opacity: .9; 
 }
 
+#shoppingListTable {
+    background-color: white;
+    opacity: .9; 
+}
+
 th {
     font-family: 'Slabo 27px', serif;;
     font-size: 18px; 
@@ -70,4 +79,12 @@ th {
 td {
     font-family: 'Roboto Slab', serif;
     font-size: 16px; 
+}
+
+.list-group-item > button.delete,
+.list-group-item > button.complete {
+  float: right;
+  height: 28px;
+  width: 33px; 
+  margin-left: 5px;
 }

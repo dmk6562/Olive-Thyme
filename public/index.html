@@ -9,36 +9,48 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald|Slabo 27px" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/lumen/bootstrap.min.css" />
-
-    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery.js"></script>
 
+    <!-- Bootstrap Link -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+
+    <!-- Title -->
+    <link rel="icon" type="image/icon" href="oliveicon.png"/>
+        <title>Categories</title>
+
+
+
 </head>
 
 <body>
 <div class="container">
     <div class="row top-30">
         <div class="col-md-2 col-sm-2">
-            <a class="btn btn-light" href="/recipe">Go to Recipes</a>
+            <a class="btn btn-success" href="/recipe">Go to Recipes</a>
         </div>
         <div class="col-md-2 col-sm-2">
-            <a class="btn btn-light" href="/categories">Categories</a>
+            <a class="btn btn-success" href="/categories">Categories</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-8 offset-md-2" id = "shoppingListContainer">
+                <h1>Shopping List</h1>
+                <hr>
+        <div class = "panel panel-default" id = "shoppingListTable">
             <ul class="list-group todo-list">
                 <li class="list-group-item new-item">
                     <form id="todo-form">
                         <div class="container">
                             <div class="row">
-                                <div class="col-10">
+                                <div class="col-9">
                                     <input class="new-item form-control" placeholder="Add a todo" type="text" />
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <button type="submit" class="btn btn-success">Add Todo</button>
                                 </div>
                             </div>
@@ -49,6 +61,7 @@
           </span>
             </ul>
         </div>
+    </div>
     </div>
 </div>
 <!-- Custom Script -->
