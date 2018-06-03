@@ -73,7 +73,7 @@ $(document).ready(function() {
         newPostCardHeading.addClass("card-header");
         var deleteBtn = $("<button>");
         deleteBtn.text("x");
-        deleteBtn.addClass("delete btn btn-danger");
+        deleteBtn.addClass("delete btn bftn-danger");
         var editBtn = $("<button>");
         editBtn.text("EDIT");
         editBtn.addClass("edit btn btn-info");
@@ -135,7 +135,7 @@ $(document).ready(function() {
         messageH2.css({ "text-align": "center", "margin-top": "50px", "font-family": "Roboto Slab" });
         messageH2.html("Click" + partial + "  <a href='/cms" + query +
             "'>here</a> to get started.");
-        blogContainer.append(messageH2);
+        recipeContainer.append(messageH2);
     }
 
 });
