@@ -101,3 +101,13 @@ td, label {
     padding-bottom: 10px; 
     opacity: .9; 
 }
+
+#newItem {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px; 
+}
+
+.jumbotron {
+    background-color: white; 
+    opacity: .9; 
+}
