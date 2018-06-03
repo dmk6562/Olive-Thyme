@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    // Getting jQuery references to the post body, title, form, and author select
+    // Getting jQuery references to the post body, title, form, and category select
     var bodyInput = $("#body");
     var titleInput = $("#title");
     var cmsForm = $("#cms");
-    var authorSelect = $("#author");
+    var categorySelect = $("#author");
     // Adding an event listener for when the form is submitted
     $(cmsForm).on("submit", handleFormSubmit);
     // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
@@ -19,19 +19,19 @@ $(document).ready(function() {
         postId = url.split("=")[1];
         getPostData(postId, "post");
     }
-    // Otherwise if we have an author_id in our url, preset the author select box to be our Author
+    // Otherwise if we have an category_id in our url, preset the category select box to be our Category
     else if (url.indexOf("?category_id=") !== -1) {
         categoryId = url.split("=")[1];
     }
 
-    // Getting the authors, and their posts
+    // Getting the categories, and their posts
     getCategories();
 
     // A function for handling what happens when the form to create a new post is submitted
     function handleFormSubmit(event) {
         event.preventDefault();
-        // Wont submit the post if we are missing a body, title, or author
-        if (!titleInput.val().trim() || !bodyInput.val().trim() || !authorSelect.val()) {
+        // Wont submit the post if we are missing a body, title, or category
+        if (!titleInput.val().trim() || !bodyInput.val().trim() || !categorySelect.val()) {
             return;
         }
         // Constructing a newPost object to hand to the database
@@ -42,7 +42,7 @@ $(document).ready(function() {
             body: bodyInput
                 .val()
                 .trim(),
-            CategoryId: authorSelect.val()
+            CategoryId: categorySelect.val()
         };
 
         // If we're updating a post run updatePost to update a post
@@ -56,14 +56,14 @@ $(document).ready(function() {
         }
     }
 
-    // Submits a new post and brings user to blog page upon completion
+    // Submits a new post and brings user to recipe page upon completion
     function submitPost(post) {
         $.post("/api/posts", post, function() {
             window.location.href = "/recipe";
         });
     }
 
-    // Gets post data for the current post if we're editing, or if we're adding to an author's existing posts
+    // Gets post data for the current post if we're editing, or if we're adding to a categories' existing posts
     function getPostData(id, type) {
         var queryUrl;
         switch (type) {
@@ -90,37 +90,37 @@ $(document).ready(function() {
         });
     }
 
-    // A function to get Authors and then render our list of Authors
+    // A function to get Categories and then render our list of Categories
     function getCategories() {
-        $.get("/api/categories", renderAuthorList);
+        $.get("/api/categories", renderCategoryList);
     }
-    // Function to either render a list of authors, or if there are none, direct the user to the page
-    // to create an author first
-    function renderAuthorList(data) {
+    // Function to either render a list of categories, or if there are none, direct the user to the page
+    // to create a category first
+    function renderCategoryList(data) {
         if (!data.length) {
             window.location.href = "/categories";
         }
         $(".hidden").removeClass("hidden");
         var rowsToAdd = [];
         for (var i = 0; i < data.length; i++) {
-            rowsToAdd.push(createAuthorRow(data[i]));
+            rowsToAdd.push(createCategoryRow(data[i]));
         }
-        authorSelect.empty();
+        categorySelect.empty();
         console.log(rowsToAdd);
-        console.log(authorSelect);
-        authorSelect.append(rowsToAdd);
-        authorSelect.val(categoryId);
+        console.log(categorySelect);
+        categorySelect.append(rowsToAdd);
+        categorySelect.val(categoryId);
     }
 
-    // Creates the author options in the dropdown
-    function createAuthorRow(author) {
+    // Creates the categories options in the dropdown
+    function createCategoryRow(category) {
         var listOption = $("<option>");
-        listOption.attr("value", author.id);
-        listOption.text(author.name);
+        listOption.attr("value", category.id);
+        listOption.text(category.name);
         return listOption;
     }
 
-    // Update a given post, bring user to the blog page when done
+    // Update a given post, bring user to the recipe page when done
     function updatePost(post) {
         $.ajax({
             method: "PUT",

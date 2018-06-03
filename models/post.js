@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Post.associate = function(models) {
-        // We're saying that a Post should belong to an Category
+        // We're saying that a Post should belong to a Category
         // A Post can't be created without a category due to the foreign key constraint
         Post.belongsTo(models.Category, {
             foreignKey: {
