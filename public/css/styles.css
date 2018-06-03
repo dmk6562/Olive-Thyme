@@ -16,8 +16,9 @@ button.edit {
     margin: 5px;
 }
 
-.author-container {
+.category-container {
     margin-top: 50px;
+    /* background-color: blue;  */
 }
 
 .author-list {
@@ -53,9 +54,20 @@ h1 {
 
 body {
     background-image: url(olives.jpg);
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    /* opacity: .9; */
 }
 
+#table {
+    background-color: white;
+    opacity: .9; 
+}
+
+th {
+    font-family: 'Slabo 27px', serif;;
+    font-size: 18px; 
+} 
 td {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px; 
 }

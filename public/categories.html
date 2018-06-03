@@ -3,20 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CMS</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald|Slabo 27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald|Slabo 27px|Roboto+Slab" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS & JS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
 
     <script src="https://code.jquery.com/jquery.js"></script>
 
     <!-- Bootstrap Link -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+
+    <!-- Title -->
+    <link rel="icon" type="image/icon" href="oliveicon.png"/>
+        <title>Categories</title>
 
 </head>
 
@@ -32,9 +39,11 @@
     </div>
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <div class="author-container">
+            <div class="category-container panel panel-default">
                 <h1>Categories</h1>
-                <table class="table table-striped">
+                <hr>
+                <div class = "panel panel-default" id = "table">
+                <table class="table table-striped" id= "table">
                     <thead>
                     <tr>
                         <th>Category</th>
@@ -56,6 +65,7 @@
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>
