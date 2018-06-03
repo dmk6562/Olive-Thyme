@@ -6,8 +6,13 @@ form#cms {
     margin-top: 50px;
 }
 
-#cms textarea {
+#title {
+    font-family:'Roboto Slab', serif; 
+}
+
+#cms textarea{
     resize: none;
+    font-family:'Roboto Slab', serif; 
 }
 
 .card-header button.delete,
@@ -16,7 +21,11 @@ button.edit {
     margin: 5px;
 }
 
-.author-container {
+#shoppingListContainer {
+    margin-top: 45px; 
+}
+
+.category-container {
     margin-top: 50px;
 }
 
@@ -59,9 +68,52 @@ body {
 
 >>>>>>> 1fa24cbc62577bf9e731ac3f2305b566587b0f53
     background-image: url(olives.jpg);
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    /* opacity: .9; */
 }
 
-td {
-    font-family: 'Oswald', sans-serif;
+#table {
+    background-color: white;
+    opacity: .9; 
+}
+
+#shoppingListTable {
+    background-color: white;
+    opacity: .9; 
+}
+
+th {
+    font-family: 'Slabo 27px', serif;;
+    font-size: 18px; 
+} 
+td, label {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px; 
+}
+
+.list-group-item > button.delete,
+.list-group-item > button.complete {
+  float: right;
+  height: 28px;
+  width: 33px; 
+  margin-left: 5px;
+}
+
+#newRecipeBox {
+    background-color: white;
+    padding-left: 22px; 
+    padding-right: 22px; 
+    padding-top: 18px; 
+    padding-bottom: 10px; 
+    opacity: .9; 
+}
+
+#newItem {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px; 
+}
+
+.jumbotron {
+    background-color: white; 
+    opacity: .9; 
 }

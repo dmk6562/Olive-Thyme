@@ -132,10 +132,10 @@ $(document).ready(function() {
         }
         recipeContainer.empty();
         var messageH2 = $("<h2>");
-        messageH2.css({ "text-align": "center", "margin-top": "50px" });
-        messageH2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
-            "'>click here</a>to get started.");
-        recipeContainer.append(messageH2);
+        messageH2.css({ "text-align": "center", "margin-top": "50px", "font-family": "Roboto Slab" });
+        messageH2.html("Click" + partial + "  <a href='/cms" + query +
+            "'>here</a> to get started.");
+        blogContainer.append(messageH2);
     }
 
 });

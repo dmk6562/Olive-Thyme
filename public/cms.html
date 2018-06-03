@@ -2,37 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>CMS - Express</title>
-
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald|Slabo 27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald|Slabo 27px|Roboto+Slab" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS & JS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
-
     <script src="https://code.jquery.com/jquery.js"></script>
 
+    <!-- Bootstrap Link -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+
+    <!-- Title -->
+    <link rel="icon" type="image/icon" href="oliveicon.png"/>
+        <title>New Recipe</title>
 </head>
 
 <body>
 <div class="container">
     <div class="row top-30">
         <div class="col-md-2 col-sm-2">
-            <a class="btn btn-light" href="/recipe">Go to Recipes</a>
+            <a class="btn btn-success" href="/recipe">Go to Recipes</a>
         </div>
         <div class="col-md-2 col-sm-2">
-            <a class="btn btn-light" href="/categories">Categories</a>
+            <a class="btn btn-success" href="/categories">Categories</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-8 offset-md-2">
             <form id="cms">
+                <h1>Add a New Recipe</h1>
+                <hr>
                 <div class="form-group">
+                    <div class = "panel panel-default" id="newRecipeBox">
                     <label for="title">Recipe:</label>
                     <input placeholder="Enter Recipe Name" type="text" class="form-control" id="title">
                     <br />
@@ -43,9 +51,10 @@
                         <select class="custom-select" id="author">
                         </select>
                     </div>
-                    <br />
                     <button type="submit" class="btn btn-success submit">Add Recipe</button>
+                    <br></br>
                 </div>
+            </div>
             </form>
         </div>
     </div>
