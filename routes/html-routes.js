@@ -27,9 +27,9 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/recipe.html"));
     });
 
-    // authors route loads author-manager.html
+    // authors route loads categories.html
     app.get("/categories", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+        res.sendFile(path.join(__dirname, "../public/categories.html"));
     });
 
     // views //
