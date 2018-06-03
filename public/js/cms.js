@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // Getting jQuery references to the post body, title, form, and author select
+    // Getting jQuery references to the post body, title, form, and category select
     var bodyInput = $("#body");
     var titleInput = $("#title");
     var cmsForm = $("#cms");
@@ -19,18 +19,18 @@ $(document).ready(function() {
         postId = url.split("=")[1];
         getPostData(postId, "post");
     }
-    // Otherwise if we have an author_id in our url, preset the author select box to be our Author
+    // Otherwise if we have a category_id in our url, preset the category select box to be our Category
     else if (url.indexOf("?category_id=") !== -1) {
         categoryId = url.split("=")[1];
     }
 
-    // Getting the authors, and their posts
+    // Getting the category, and their posts
     getCategories();
 
     // A function for handling what happens when the form to create a new post is submitted
     function handleFormSubmit(event) {
         event.preventDefault();
-        // Wont submit the post if we are missing a body, title, or author
+        // Wont submit the post if we are missing a body, title, or category
         if (!titleInput.val().trim() || !bodyInput.val().trim() || !authorSelect.val()) {
             return;
         }
@@ -63,7 +63,7 @@ $(document).ready(function() {
         });
     }
 
-    // Gets post data for the current post if we're editing, or if we're adding to an author's existing posts
+    // Gets post data for the current post if we're editing, or if we're adding to a category existing posts
     function getPostData(id, type) {
         var queryUrl;
         switch (type) {
@@ -90,12 +90,12 @@ $(document).ready(function() {
         });
     }
 
-    // A function to get Authors and then render our list of Authors
+    // A function to get categories and then render our list of categories
     function getCategories() {
         $.get("/api/categories", renderAuthorList);
     }
-    // Function to either render a list of authors, or if there are none, direct the user to the page
-    // to create an author first
+    // Function to either render a list of categories, or if there are none, direct the user to the page
+    // to create a category first
     function renderAuthorList(data) {
         if (!data.length) {
             window.location.href = "/categories";
@@ -112,7 +112,7 @@ $(document).ready(function() {
         authorSelect.val(categoryId);
     }
 
-    // Creates the author options in the dropdown
+    // Creates the categories options in the dropdown
     function createAuthorRow(author) {
         var listOption = $("<option>");
         listOption.attr("value", author.id);
@@ -120,7 +120,7 @@ $(document).ready(function() {
         return listOption;
     }
 
-    // Update a given post, bring user to the blog page when done
+    // Update a given post, bring user to the recipe page when done
     function updatePost(post) {
         $.ajax({
             method: "PUT",
