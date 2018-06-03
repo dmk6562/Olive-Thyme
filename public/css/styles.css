@@ -36,7 +36,12 @@ button.edit {
     display: none;
 }
 
-#author-name {
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+#category-name {
+    font-family: 'Pacifico', cursive;
     width: 100%;
     height: 35px;
     margin-top: 5px;
@@ -44,4 +49,14 @@ button.edit {
 
 .top-30 {
     margin-top: 30px;
+}
+
+body {
+    /* /Users/mariamchaudry/gtcbc/homework/olive-thyme-project-2/public/images/olives.jpg */
+    background-image: url(/Users/mariamchaudry/gtcbc/homework/olive-thyme-project-2/public/css/olives.jpg);
+    background-repeat: no-repeat
+}
+
+td {
+    font-family: 'Oswald', sans-serif;
 }

@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Getting references to the name input and author container, as well as the table body
-    var nameInput = $("#author-name");
+    var nameInput = $("#category-name");
     var authorList = $("tbody");
     var authorContainer = $(".author-container");
     // Adding event listeners to the form to create a new object, and the button to delete
