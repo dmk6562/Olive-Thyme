@@ -52,8 +52,8 @@ h1 {
 }
 
 body {
-    /* /Users/mariamchaudry/gtcbc/homework/olive-thyme-project-2/public/images/olives.jpg */
-    background-image: url(/Users/mariamchaudry/gtcbc/homework/olive-thyme-project-2/public/css/olives.jpg);
+    
+    background-image: url(olives.jpg);
     background-repeat: no-repeat
 }
 
