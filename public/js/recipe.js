@@ -78,9 +78,9 @@ $(document).ready(function() {
         editBtn.text("EDIT");
         editBtn.addClass("edit btn btn-info");
         var newPostTitle = $("<h2>");
-        var newPostDate = $("<small>");
+        // var newPostDate = $("<small>");
         var newPostCategory = $("<h5>");
-        newPostCategory.text("Written by: " + post.Category.name);
+        post.Category.name;
         newPostCategory.css({
             float: "right",
             color: "blue",
@@ -92,8 +92,6 @@ $(document).ready(function() {
         var newPostBody = $("<p>");
         newPostTitle.text(post.title + " ");
         newPostBody.text(post.body);
-        newPostDate.text(formattedDate);
-        newPostTitle.append(newPostDate);
         newPostCardHeading.append(deleteBtn);
         newPostCardHeading.append(editBtn);
         newPostCardHeading.append(newPostTitle);
