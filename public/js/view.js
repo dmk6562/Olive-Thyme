@@ -20,7 +20,7 @@ $(document).ready(function() {
         postId = url.split("=")[1];
         getPostData(postId, "post");
     }
-    // Otherwise if we have an author_id in our url, preset the author select box to be our Author
+    // Otherwise if we have an category_id in our url, preset the category select box to be our Category
     else if (url.indexOf("?category_id=") !== -1) {
         categoryId = url.split("=")[1];
     }

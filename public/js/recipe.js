@@ -1,7 +1,7 @@
 $(document).ready(function() {
     /* global moment */
 
-    // blogContainer holds all of our posts
+    // recipe Container holds all of our posts
     var blogContainer = $(".blog-container");
     var postCategorySelect = $("#category");
     // Click events for the edit and delete buttons
@@ -10,7 +10,7 @@ $(document).ready(function() {
     // Variable to hold our posts
     var posts;
 
-    // The code below handles the case where we want to get blog posts for a specific category
+    // The code below handles the case where we want to get recipe posts for a specific category
     // Looks for a query param in the url for category_id
     var url = window.location.search;
     var categoryId;
@@ -24,7 +24,7 @@ $(document).ready(function() {
     }
 
 
-    // This function grabs posts from the database and updates the view
+    // This function grabs recipes from the database and updates the view
     function getPosts(category) {
         categoryId = category || "";
         if (categoryId) {
@@ -65,8 +65,6 @@ $(document).ready(function() {
 
     // This function constructs a post's HTML
     function createNewRow(post) {
-        var formattedDate = new Date(post.createdAt);
-        formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
         var newPostCard = $("<div>");
         newPostCard.addClass("card");
         var newPostCardHeading = $("<div>");
@@ -80,7 +78,7 @@ $(document).ready(function() {
         var newPostTitle = $("<h2>");
         // var newPostDate = $("<small>");
         var newPostCategory = $("<h5>");
-        post.Category.name;
+        newPostCategory.text("Category: " + post.Category.name);
         newPostCategory.css({
             float: "right",
             color: "blue",
