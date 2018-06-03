@@ -73,7 +73,7 @@ $(document).ready(function() {
         newPostCardHeading.addClass("card-header");
         var deleteBtn = $("<button>");
         deleteBtn.text("x");
-        deleteBtn.addClass("delete btn btn-danger");
+        deleteBtn.addClass("delete btn bftn-danger");
         var editBtn = $("<button>");
         editBtn.text("EDIT");
         editBtn.addClass("edit btn btn-info");

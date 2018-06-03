@@ -14,6 +14,17 @@ $(document).ready(function() {
     // Our initial todos array
     var todos = [];
 
+    // If we have this section in our url, we pull out the post id from the url
+    // In '?post_id=1', postId is 1
+    if (url.indexOf("?post_id=") !== -1) {
+        postId = url.split("=")[1];
+        getPostData(postId, "post");
+    }
+    // Otherwise if we have an author_id in our url, preset the author select box to be our Author
+    else if (url.indexOf("?category_id=") !== -1) {
+        categoryId = url.split("=")[1];
+    }
+
     // Getting todos from database when page loads
     getTodos();
 
