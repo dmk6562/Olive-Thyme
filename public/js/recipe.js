@@ -134,7 +134,7 @@ $(document).ready(function() {
         var messageH2 = $("<h2>");
         messageH2.css({ "text-align": "center", "margin-top": "50px" });
         messageH2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
-            "'>here</a> in order to get started.");
+            "'>click here</a>to get started.");
         recipeContainer.append(messageH2);
     }
 
