@@ -132,7 +132,7 @@ $(document).ready(function() {
         }
         blogContainer.empty();
         var messageH2 = $("<h2>");
-        messageH2.css({ "text-align": "center", "margin-top": "50px", "font-family": "Roboto Slab" });
+        messageH2.css({ "text-align": "center", "margin-top": "50px", "font-family": "Slabo 27px" });
         messageH2.html("Click" + partial + "  <a href='/cms" + query +
             "'>here</a> to get started.");
         blogContainer.append(messageH2);
