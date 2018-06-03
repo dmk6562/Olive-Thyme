@@ -1,45 +1,45 @@
 $(document).ready(function() {
-    // Getting references to the name input and author container, as well as the table body
+    // Getting references to the name input and category container, as well as the table body
     var nameInput = $("#category-name");
     var authorList = $("tbody");
     var authorContainer = $(".author-container");
     // Adding event listeners to the form to create a new object, and the button to delete
-    // an Author
+    // a category
     $(document).on("submit", "#author-form", handleAuthorFormSubmit);
     $(document).on("click", ".delete-author", handleDeleteButtonPress);
 
-    // Getting the initial list of Authors
+    // Getting the initial list of categories
     getCategories();
 
-    // A function to handle what happens when the form is submitted to create a new Author
+    // A function to handle what happens when the form is submitted to create a new category
     function handleAuthorFormSubmit(event) {
         event.preventDefault();
         // Don't do anything if the name fields hasn't been filled out
         if (!nameInput.val().trim().trim()) {
             return;
         }
-        // Calling the upsertAuthor function and passing in the value of the name input
-        upsertAuthor({
+        // Calling the upsertCategory function and passing in the value of the name input
+        upsertCategory({
             name: nameInput
                 .val()
                 .trim()
         });
     }
 
-    // A function for creating an author. Calls getCategories upon completion
-    function upsertAuthor(authorData) {
-        $.post("/api/categories", authorData)
+    // A function for creating a category. Calls getCategories upon completion
+    function upsertCategory(categoryData) {
+        $.post("/api/categories", categoryData)
             .then(getCategories);
     }
 
-    // Function for creating a new list row for authors
-    function createAuthorRow(authorData) {
+    // Function for creating a new list row for categories
+    function createCategoryRow(categoryData) {
         var newTr = $("<tr>");
-        newTr.data("author", authorData);
-        newTr.append("<td>" + authorData.name + "</td>");
-        newTr.append("<td> " + authorData.Posts.length + "</td>");
-        newTr.append("<td><a href='/recipe?author_id=" + authorData.id + "'>Go to Posts</a></td>");
-        newTr.append("<td><a href='/cms?author_id=" + authorData.id + "'>Create a Post</a></td>");
+        newTr.data("category", categoryData);
+        newTr.append("<td>" + categoryData.name + "</td>");
+        newTr.append("<td> " + categoryData.Posts.length + "</td>");
+        newTr.append("<td><a href='/recipe?author_id=" + categoryData.id + "'>Go to Posts</a></td>");
+        newTr.append("<td><a href='/cms?author_id=" + categoryData.id + "'>Create a Post</a></td>");
         newTr.append("<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>");
         return newTr;
     }
