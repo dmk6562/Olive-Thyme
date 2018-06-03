@@ -1,8 +1,8 @@
 $(document).ready(function() {
     /* global moment */
 
-    // recipeContainer holds all of our posts
-    var recipeContainer = $(".blog-container");
+    // blogContainer holds all of our posts
+    var blogContainer = $(".blog-container");
     var postCategorySelect = $("#category");
     // Click events for the edit and delete buttons
     $(document).on("click", "button.delete", handlePostDelete);
@@ -10,7 +10,7 @@ $(document).ready(function() {
     // Variable to hold our posts
     var posts;
 
-    // The code below handles the case where we want to get recipe posts for a specific category
+    // The code below handles the case where we want to get blog posts for a specific category
     // Looks for a query param in the url for category_id
     var url = window.location.search;
     var categoryId;
@@ -53,14 +53,14 @@ $(document).ready(function() {
             });
     }
 
-    // InitializeRows handles appending all of our constructed post HTML inside recipeContainer
+    // InitializeRows handles appending all of our constructed post HTML inside blogContainer
     function initializeRows() {
-        recipeContainer.empty();
+        blogContainer.empty();
         var postsToAdd = [];
         for (var i = 0; i < posts.length; i++) {
             postsToAdd.push(createNewRow(posts[i]));
         }
-        recipeContainer.append(postsToAdd);
+        blogContainer.append(postsToAdd);
     }
 
     // This function constructs a post's HTML
@@ -73,7 +73,7 @@ $(document).ready(function() {
         newPostCardHeading.addClass("card-header");
         var deleteBtn = $("<button>");
         deleteBtn.text("x");
-        deleteBtn.addClass("delete btn bftn-danger");
+        deleteBtn.addClass("delete btn btn-danger");
         var editBtn = $("<button>");
         editBtn.text("EDIT");
         editBtn.addClass("edit btn btn-info");
@@ -130,12 +130,12 @@ $(document).ready(function() {
         if (id) {
             partial = " for Category #" + id;
         }
-        recipeContainer.empty();
+        blogContainer.empty();
         var messageH2 = $("<h2>");
         messageH2.css({ "text-align": "center", "margin-top": "50px", "font-family": "Roboto Slab" });
         messageH2.html("Click" + partial + "  <a href='/cms" + query +
             "'>here</a> to get started.");
-        recipeContainer.append(messageH2);
+        blogContainer.append(messageH2);
     }
 
 });
