@@ -1,8 +1,8 @@
 $(document).ready(function() {
     /* global moment */
 
-    // blogContainer holds all of our posts
-    var blogContainer = $(".blog-container");
+    // recipeContainer holds all of our posts
+    var recipeContainer = $(".blog-container");
     var postCategorySelect = $("#category");
     // Click events for the edit and delete buttons
     $(document).on("click", "button.delete", handlePostDelete);
@@ -10,7 +10,7 @@ $(document).ready(function() {
     // Variable to hold our posts
     var posts;
 
-    // The code below handles the case where we want to get blog posts for a specific category
+    // The code below handles the case where we want to get recipe posts for a specific category
     // Looks for a query param in the url for category_id
     var url = window.location.search;
     var categoryId;
@@ -53,14 +53,14 @@ $(document).ready(function() {
             });
     }
 
-    // InitializeRows handles appending all of our constructed post HTML inside blogContainer
+    // InitializeRows handles appending all of our constructed post HTML inside recipeContainer
     function initializeRows() {
-        blogContainer.empty();
+        recipeContainer.empty();
         var postsToAdd = [];
         for (var i = 0; i < posts.length; i++) {
             postsToAdd.push(createNewRow(posts[i]));
         }
-        blogContainer.append(postsToAdd);
+        recipeContainer.append(postsToAdd);
     }
 
     // This function constructs a post's HTML
@@ -130,12 +130,12 @@ $(document).ready(function() {
         if (id) {
             partial = " for Category #" + id;
         }
-        blogContainer.empty();
+        recipeContainer.empty();
         var messageH2 = $("<h2>");
         messageH2.css({ "text-align": "center", "margin-top": "50px", "font-family": "Roboto Slab" });
         messageH2.html("Click" + partial + "  <a href='/cms" + query +
             "'>here</a> to get started.");
-        blogContainer.append(messageH2);
+        recipeContainer.append(messageH2);
     }
 
 });

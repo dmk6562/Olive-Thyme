@@ -22,17 +22,17 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/cms.html"));
     });
 
-    // blog route loads blog.html
+    // recipe route loads recipe.html
     app.get("/recipe", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/recipe.html"));
     });
 
-    // authors route loads categories.html
+    // categories route loads categories.html
     app.get("/categories", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/categories.html"));
     });
 
-    // views //
+    // view shopping list
     app.get("/view", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
