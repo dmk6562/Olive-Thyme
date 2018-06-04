@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/elizabethtfox/olive-thyme-project-2#readme",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mysql": "^2.15.0",

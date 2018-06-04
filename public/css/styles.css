@@ -49,6 +49,11 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 
+#mainTitle {
+    animation-delay: 1s; 
+    animation-duration: 7s;
+}
+
 #category-name {
     font-family: 'Pacifico', cursive;
     width: 100%;
@@ -111,3 +116,23 @@ td, label {
     background-color: white; 
     opacity: .9; 
 }
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+/* h1:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 90%;
+    white-space: nowrap;
+    color: #ffffff;
+    color: lightcoral;
+    animation: loading 5s infinite;
+}
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+} */
