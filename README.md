@@ -6,7 +6,7 @@ A shopping list is included that will allow users to add items to a list that th
 
 ## Getting Started
 
-You can use this app NOW: [Olive & Thyme](https://gtcbc-project-2.herokuapp.com/). You can also clone or download a copy of this app by clicking the link on the top-right.
+You can use this app on Heroku NOW: [Olive & Thyme](https://gtcbc-project-2.herokuapp.com/). You can also clone or download a copy of this app by clicking the link on the top-right.
 
 ### Prerequisites
 
